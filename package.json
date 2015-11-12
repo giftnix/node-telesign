@@ -1,0 +1,31 @@
+{
+  "name": "telesign",
+  "version": "0.1.0",
+  "description": "NodeJS SDK for the TeleSign REST APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/giftnix/telesign.git"
+  },
+  "keywords": [
+    "telesign",
+    "api",
+    "rest",
+    "sdk",
+    "wrapper"
+  ],
+  "author": "Giftnix",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.65.0"
+  },
+  "devDependencies": {
+    "async": "*",
+    "chai": "*",
+    "grunt": "*",
+    "grunt-simple-mocha": "*"
+  }
+}
