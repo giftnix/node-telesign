@@ -30,11 +30,14 @@ var verify = require('./lib/verify');
     params = setupParams;
     params.version = setupParams.version ? setupParams.version.toString() : defaults.version;
 
-    TeleSign.phoneId = phoneId.setup(params);
-    TeleSign.verify = verify.setup(params);
+    TeleSign.phoneId.setup(params);
+    TeleSign.verify.setup(params);
 
     return this;
   };
+
+  TeleSign.phoneId = phoneId;
+  TeleSign.verify = verify;
 
   /* NPM EXPORT */
 
