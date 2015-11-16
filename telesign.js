@@ -13,7 +13,9 @@ var verify = require('./lib/verify');
 
   var params;
   var defaults = {
-    version: '1'
+    version: '1',
+    authMethod: 'sha1',
+    timeout: 3000
   };
 
   /* PUBLIC FUNCTIONS */
@@ -29,6 +31,25 @@ var verify = require('./lib/verify');
 
     params = setupParams;
     params.version = setupParams.version ? setupParams.version.toString() : defaults.version;
+    params.authMethod = setupParams.authMethod ? setupParams.authMethod.toLowerCase() : defaults.authMethod;
+
+    if (params.authMethod !== 'sha1' && params.authMethod !== 'sha256') {
+      throw new Error('Param "authMethod" must be either "sha1" or "sha256".');
+    } else {
+      if (params.authMethod === 'sha1') {
+        params.authMethod = {
+          hash: 'sha1',
+          name: 'HMAC-SHA1'
+        };
+      } else {
+        params.authMethod = {
+          hash: 'sha256',
+          name: 'HMAC-SHA256'
+        };
+      }
+    }
+
+    params.timeout = setupParams.timeout ? parseInt(setupParams.timeout) : defaults.timeout;
 
     TeleSign.phoneId.setup(params);
     TeleSign.verify.setup(params);
