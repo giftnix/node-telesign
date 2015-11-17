@@ -21,9 +21,9 @@ You can find your Customer ID and API Key on the TelePortal at [https://teleport
 
 ### Optional Setup Parameters
 
-- ``version`` - API version *defaults to '1'*
-- ``authMethod`` - either ``sha1`` or ``sha256`` *defaults to 'sha1'*
-- ``timeout`` - request timeout, in milliseconds, before returning an error *defaults to 3000*
+- ``version`` - API version as a numeric string ***defaults to '1'***
+- ``authMethod`` - either ``sha1`` or ``sha256`` ***defaults to 'sha1'***
+- ``timeout`` - request timeout, in milliseconds, before returning an error ***defaults to 3000***
 
 ## Available Endpoints
 
@@ -33,7 +33,7 @@ For resources that require a ``ucid``, see the list of available Use Case Codes 
 
 ## PhoneID
 
-### PhoneID Standard
+### Get PhoneID Standard
 
 The PhoneID Standard web service returns information about a specified phone number.
 
@@ -46,7 +46,7 @@ The PhoneID Standard web service returns information about a specified phone num
       // response: JSON response from TeleSign
     });
 
-### PhoneID Score
+### Get PhoneID Score
 
 The PhoneID Score web service provides risk information about a specified phone number.
 
@@ -60,7 +60,7 @@ The PhoneID Score web service provides risk information about a specified phone 
       // response: JSON response from TeleSign
     });
 
-### PhoneID Contact
+### Get PhoneID Contact
 
 The PhoneID Contact web service provides contact details for a specified phone number’s subscriber
 
@@ -74,7 +74,7 @@ The PhoneID Contact web service provides contact details for a specified phone n
       // response: JSON response from TeleSign
     });
 
-### PhoneID Live
+### Get PhoneID Live
 
 The PhoneID Live web service provides information about a specified phone number’s state of operation
 
@@ -192,10 +192,6 @@ The TeleSign Verify Registration web service allows you to query TeleSign to det
       // response: JSON response from TeleSign
     });
 
-### Smart Verify
-
-*Not yet implemented in this module.*
-
 ### Get the Verification Results
 
 Once a verificaiton has been placed via call or SMS, you can get the results of the verification at any time using the reference ID that is sent back after your verification request is placed.
@@ -210,6 +206,10 @@ Once a verificaiton has been placed via call or SMS, you can get the results of 
 **You have 12 hours to get these results.**
 
 You can have TeleSign push the results to you automatically by subscribing to a [Verify Transaction Callback](http://docs.telesign.com/rest/content/transaction-callback.html#xref-transaction-callback).
+
+### Smart Verify
+
+*Not yet implemented in this module.*
 
 ## Mobile Device
 
