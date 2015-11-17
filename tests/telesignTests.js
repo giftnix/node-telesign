@@ -10,7 +10,7 @@ var telesign = require('../telesign').setup({
 
 /* TEST */
 
-telesign.phoneId.standard({
+telesign.phoneId.score({
   phoneNumber: '15125844348'
 }, function(err, data) {
   console.log('err::', err);
