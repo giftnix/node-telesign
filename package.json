@@ -1,7 +1,7 @@
 {
   "name": "telesign",
   "version": "0.1.0",
-  "description": "NodeJS SDK for the TeleSign REST APIs",
+  "description": "NodeJS SDK for the TeleSign APIs",
   "main": "telesign.js",
   "scripts": {
     "test": "grunt test"
@@ -15,17 +15,19 @@
     "api",
     "rest",
     "sdk",
-    "wrapper"
+    "wrapper",
+    "phone",
+    "verification",
+    "sms"
   ],
   "author": "Giftnix",
   "license": "MIT",
   "dependencies": {
-    "moment": "^2.10.6",
-    "query-string": "^3.0.0",
-    "request": "^2.65.0"
+    "moment": "2.x.x",
+    "query-string": "3.x.x",
+    "request": "2.x.x"
   },
   "devDependencies": {
-    "async": "*",
     "chai": "*",
     "grunt": "*",
     "grunt-simple-mocha": "*"
