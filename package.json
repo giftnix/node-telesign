@@ -20,6 +20,7 @@
   "author": "Giftnix",
   "license": "MIT",
   "dependencies": {
+    "moment": "^2.10.6",
     "query-string": "^3.0.0",
     "request": "^2.65.0"
   },
