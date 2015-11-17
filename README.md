@@ -31,15 +31,39 @@ For resources that require a ``ucid``, see the list of available Use Case Codes 
 
 ### PhoneID
 
-#### Score
+#### Standard
 
     var options = {
-      phoneNumber: '15555555', **required**
-      ucid: '' **required**
+      phoneNumber: '15555555', // required
     };
 
     telesign.phoneId.score(options, function(err, response) {
-      // err includes errors returned in TeleSign response
+      // returns an err on failed request
+      // or when TeleSign returns an error
+    });
+
+#### Score
+
+    var options = {
+      phoneNumber: '15555555', // required
+      ucid: '' // required
+    };
+
+    telesign.phoneId.score(options, function(err, response) {
+      // returns an err on failed request
+      // or when TeleSign returns an error
+    });
+
+#### Contact
+
+    var options = {
+      phoneNumber: '15555555', // required
+      ucid: '' // required
+    };
+
+    telesign.phoneId.score(options, function(err, response) {
+      // returns an err on failed request
+      // or when TeleSign returns an error
     });
 
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
