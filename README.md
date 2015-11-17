@@ -19,7 +19,7 @@ Require the module and call ``setup()``:
 
 You can find your Customer ID and API Key on the TelePortal at [https://teleportal.telesign.com/](https://teleportal.telesign.com/) (leave your API Key in the base64 format as listed).
 
-#### Optional Setup Parameters
+### Optional Setup Parameters
 
 - ``version`` - API version *defaults to '1'*
 - ``authMethod`` - either ``sha1`` or ``sha256`` *defaults to 'sha1'*
@@ -31,9 +31,9 @@ For resources that require a ``phoneNumber``, provide a "complete phone number c
 
 For resources that require a ``ucid``, see the list of available Use Case Codes at [http://docs.telesign.com/rest/content/xt/xt-use-case-codes.html#xref-use-case-codes](http://docs.telesign.com/rest/content/xt/xt-use-case-codes.html#xref-use-case-codes).
 
-### PhoneID
+## PhoneID
 
-#### Standard
+### PhoneID Standard
 
 The PhoneID Standard web service returns information about a specified phone number.
 
@@ -46,7 +46,7 @@ The PhoneID Standard web service returns information about a specified phone num
       // response: JSON response from TeleSign
     });
 
-#### Score
+### PhoneID Score
 
 The PhoneID Score web service provides risk information about a specified phone number.
 
@@ -60,7 +60,7 @@ The PhoneID Score web service provides risk information about a specified phone 
       // response: JSON response from TeleSign
     });
 
-#### Contact
+### PhoneID Contact
 
 The PhoneID Contact web service provides contact details for a specified phone number’s subscriber
 
@@ -74,7 +74,7 @@ The PhoneID Contact web service provides contact details for a specified phone n
       // response: JSON response from TeleSign
     });
 
-#### Live
+### PhoneID Live
 
 The PhoneID Live web service provides information about a specified phone number’s state of operation
 
@@ -90,9 +90,9 @@ The PhoneID Live web service provides information about a specified phone number
       // response: JSON response from TeleSign
     });
 
-### Verify
+## Verify
 
-#### Call
+### Verify by Call
 
 The TeleSign Verify Call web service sends a verification code to your end user in a voice message with a phone call.
 
@@ -112,7 +112,7 @@ The TeleSign Verify Call web service sends a verification code to your end user 
       // response: JSON response from TeleSign
     });
 
-#### SMS
+### Verify by SMS
 
 The TeleSign Verify SMS web service sends a verification code to your end user in a text message.
 
@@ -130,7 +130,7 @@ The TeleSign Verify SMS web service sends a verification code to your end user i
       // response: JSON response from TeleSign
     });
 
-#### 2-Way SMS
+### Verify by 2-Way SMS
 
 The TeleSign Verify 2-Way SMS web service allows you to authenticate your users and verify user transactions via two-way Short Message Service (SMS) wireless communication. Verification requests are sent to users in a text message, and users return their verification responses by replying to the text message.
 
@@ -146,7 +146,7 @@ The TeleSign Verify 2-Way SMS web service allows you to authenticate your users 
       // response: JSON response from TeleSign
     });
 
-#### Push
+### Verify by Push
 
 The TeleSign Verify Push web service is a server-side component of the TeleSign AuthID application, and it allows you to provide on-device transaction authorization for your users. It works by delivering authorization requests to your users via Push Notification, and then by receiving their permission responses via their mobile device’s wireless Internet connection. The service provides two levels of security to support two types of transactions.
 
@@ -163,7 +163,7 @@ The TeleSign Verify Push web service is a server-side component of the TeleSign 
       // response: JSON response from TeleSign
     });
 
-#### Soft Token
+### Verify Soft Token
 
 The TeleSign Verify Soft Token web service is a server-side component of the TeleSign AuthID application, and it allows you to authenticate your end users when they use the TeleSign AuthID application on their mobile device to generate a Time-based One-time Password (TOTP) verification code.
 
@@ -178,7 +178,7 @@ The TeleSign Verify Soft Token web service is a server-side component of the Tel
       // response: JSON response from TeleSign
     });
 
-#### Verify Registration
+### Verify Registration
 
 The TeleSign Verify Registration web service allows you to query TeleSign to determine the current state of the AuthID application registration.
 
@@ -192,11 +192,11 @@ The TeleSign Verify Registration web service allows you to query TeleSign to det
       // response: JSON response from TeleSign
     });
 
-#### Smart Verify
+### Smart Verify
 
 *Not yet implemented in this module.*
 
-#### Get the Verification Results
+### Get the Verification Results
 
 Once a verificaiton has been placed via call or SMS, you can get the results of the verification at any time using the reference ID that is sent back after your verification request is placed.
 
@@ -211,13 +211,13 @@ Once a verificaiton has been placed via call or SMS, you can get the results of 
 
 You can have TeleSign push the results to you automatically by subscribing to a [Verify Transaction Callback](http://docs.telesign.com/rest/content/transaction-callback.html#xref-transaction-callback).
 
-### Mobile Device
+## Mobile Device
 
 *Not yet implemented in this module.*
 
-### TeleBureau
+## TeleBureau
 
-#### Submit an Event
+### Submit a TeleBureau Event
 
 The TeleBureau Event web service allows you to programmatically submit a telephone number to TeleSign, as a candidate for addition to our TeleBureau watchlist.
 
@@ -240,7 +240,7 @@ Details on the options for the API to submit a TeleBureau event can be found [he
       // response: JSON response from TeleSign
     });
 
-#### Get an Event
+### Get a TeleBureau Event
 
 After you’ve submitted a Fraud Event, you can check to see whether TeleSign accepted it (and therefore added it to the TeleBureau watchlist) by sending a GET request to the resource created.
 
@@ -251,7 +251,7 @@ After you’ve submitted a Fraud Event, you can check to see whether TeleSign ac
       // response: JSON response from TeleSign
     });
 
-#### Delete an Event
+### Delete a TeleBureau Event
 
 After you’ve made your submission request, you can cancel it by sending a DELETE request to the resource indicated by appending the Reference ID returned in response to your submission request.
 
