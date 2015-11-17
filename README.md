@@ -2,7 +2,7 @@
 
 # TeleSign SDK for NodeJS
 
-A NodeJS wrapper for the TeleSign REST APIs
+A NodeJS wrapper for the TeleSign REST APIs.
 
 Install via npm:
 
@@ -10,7 +10,7 @@ Install via npm:
 
 ## SDK Setup
 
-Require the module and call ``setup``:
+Require the module and call ``setup()``:
 
     var telesign = require('telesign').setup({
       customerId: 'AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE',
@@ -19,13 +19,15 @@ Require the module and call ``setup``:
 
 You can find your Customer ID and API Key on the TelePortal at [https://teleportal.telesign.com/](https://teleportal.telesign.com/) (leave your API Key in the base64 format as listed).
 
-**Optional Setup Parameters**
+#### Optional Setup Parameters
 
 - ``version`` - API version *defaults to '1'*
 - ``authMethod`` - either ``sha1`` or ``sha256`` *defaults to 'sha1'*
 - ``timeout`` - request timeout, in milliseconds, before returning an error *defaults to 3000*
 
 ## Available Endpoints
+
+For resources that require a ``phoneNumber``, provide a "complete phone number composed of a string of digits without spaces or punctuation, beginning with the Country Dialing Code (e.g., “1” for North America)."
 
 For resources that require a ``ucid``, see the list of available Use Case Codes at [http://docs.telesign.com/rest/content/xt/xt-use-case-codes.html#xref-use-case-codes](http://docs.telesign.com/rest/content/xt/xt-use-case-codes.html#xref-use-case-codes).
 
@@ -46,7 +48,7 @@ For resources that require a ``ucid``, see the list of available Use Case Codes 
 
     var options = {
       phoneNumber: '15555555', // required
-      ucid: '' // required
+      ucid: 'BACF' // required
     };
 
     telesign.phoneId.score(options, function(err, response) {
@@ -58,10 +60,24 @@ For resources that require a ``ucid``, see the list of available Use Case Codes 
 
     var options = {
       phoneNumber: '15555555', // required
-      ucid: '' // required
+      ucid: 'BACF' // required
     };
 
-    telesign.phoneId.score(options, function(err, response) {
+    telesign.phoneId.contact(options, function(err, response) {
+      // returns an err on failed request
+      // or when TeleSign returns an error
+    });
+
+#### Live
+
+**Note: The information returned by PhoneID Live includes the information returned by PhoneID Standard.**
+
+    var options = {
+      phoneNumber: '15555555', // required
+      ucid: 'BACF' // required
+    };
+
+    telesign.phoneId.live(options, function(err, response) {
       // returns an err on failed request
       // or when TeleSign returns an error
     });
