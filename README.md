@@ -42,6 +42,7 @@ The PhoneID Standard web service returns information about a specified phone num
 - cleansing details
 - location
 
+
     var options = {
       phoneNumber: '15555555', // required
     };
@@ -76,6 +77,7 @@ The PhoneID Contact web service provides contact details for a specified phone n
 - State (or Province)
 - Country
 - ZIP Code
+
 
     var options = {
       phoneNumber: '15555555', // required
