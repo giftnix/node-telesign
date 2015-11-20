@@ -2,6 +2,7 @@
 
 var phoneId = require('./lib/phoneId');
 var verify = require('./lib/verify');
+var teleBureau = require('./lib/teleBureau');
 
 /* CONSTRUCTOR */
 
@@ -53,12 +54,14 @@ var verify = require('./lib/verify');
 
     TeleSign.phoneId.setup(params);
     TeleSign.verify.setup(params);
+    TeleSign.teleBureau.setup(params);
 
     return this;
   };
 
   TeleSign.phoneId = phoneId;
   TeleSign.verify = verify;
+  TeleSign.teleBureau = teleBureau;
 
   /* NPM EXPORT */
 
