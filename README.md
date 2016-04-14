@@ -22,7 +22,7 @@ You can find your Customer ID and API Key on the TelePortal at [https://teleport
 ### Optional Setup Parameters
 
 - ``version`` - API version as a numeric string ***defaults to '1'***
-- ``authMethod`` - either ``sha1`` or ``sha256`` ***defaults to 'sha1'***
+- ``authMethod`` - either ``sha1`` or ``sha256`` ***defaults to 'sha256'***
 - ``timeout`` - request timeout, in milliseconds, before returning an error ***defaults to 3000***
 
 ## Available Endpoints
