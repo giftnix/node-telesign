@@ -15,7 +15,7 @@ var teleBureau = require('./lib/teleBureau');
   var params;
   var defaults = {
     version: '1',
-    authMethod: 'sha1',
+    authMethod: 'sha256',
     timeout: 3000
   };
 
