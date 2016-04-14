@@ -264,6 +264,7 @@ After you’ve made your submission request, you can cancel it by sending a DELE
 
 ## CHANGELOG
 
+**1.0.0**: Public launch
 **0.1.1**: Default to SHA256. Tested to work with new Telesign security requirements.
 **0.1.0**: Initial release.
 
