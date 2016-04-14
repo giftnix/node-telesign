@@ -264,9 +264,9 @@ After you’ve made your submission request, you can cancel it by sending a DELE
 
 ## CHANGELOG
 
-**1.0.0**: Public launch
-**0.1.1**: Default to SHA256. Tested to work with new Telesign security requirements.
-**0.1.0**: Initial release.
+- **1.0.0**: Public launch
+- **0.1.1**: Default to SHA256. Tested to work with new Telesign security requirements.
+- **0.1.0**: Initial release.
 
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
 [license-url]: https://github.com/giftnix/telesign/blob/master/LICENSE
