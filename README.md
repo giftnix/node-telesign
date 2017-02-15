@@ -41,7 +41,7 @@ The PhoneID Standard web service returns information about a specified phone num
       phoneNumber: '15551234567', // required
     };
 
-    telesign.phoneId.score(options, function(err, response) {
+    telesign.phoneId.standard(options, function(err, response) {
       // err: failed request or error in TeleSign response
       // response: JSON response from TeleSign
     });
