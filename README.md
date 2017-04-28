@@ -46,11 +46,16 @@ var options = {
   phoneNumber: '15551234567', // required
 };
 
+<<<<<<< HEAD
 telesign.phoneId.standard(options, function(err, response) {
   // err: failed request or error in TeleSign response
   // response: JSON response from TeleSign
 });
 ```
+
+======= telesign.phoneId.standard(options, function(err, response) { // err: failed request or error in TeleSign response // response: JSON response from TeleSign });
+
+> > > > > > > 392d864bb948b9ac29eece2289c25546ebcec57d
 
 ### Get PhoneID Score
 
