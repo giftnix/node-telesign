@@ -6,7 +6,7 @@ var teleBureau = require('./lib/teleBureau');
 
 /* CONSTRUCTOR */
 
-(function() {
+(function () {
 
   var TeleSign = {};
 
@@ -21,7 +21,7 @@ var teleBureau = require('./lib/teleBureau');
 
   /* PUBLIC FUNCTIONS */
 
-  TeleSign.setup = function(setupParams) {
+  TeleSign.setup = function (setupParams) {
     if (!setupParams) {
       throw new Error('Please include params for the TeleSign module constructor.');
     } else if (!setupParams.customerId) {
