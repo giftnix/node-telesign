@@ -301,6 +301,7 @@ telesign.teleBureau.deleteEvent({
 
 ## CHANGELOG
 
+- **1.1.1:** Allow user to add `qs` object to options on API calls
 - **1.1.0:** Updated PhoneID Score endpoint to allow for newly added API parameters (`email_address`, `originating_ip`, etc)
 - **1.0.0:** Public launch
 - **0.1.1:** Default to SHA256\. Tested to work with new Telesign security requirements.
